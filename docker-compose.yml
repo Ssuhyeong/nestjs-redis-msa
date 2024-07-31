@@ -1,0 +1,51 @@
+version: '3.7'
+
+services:
+  redis:
+    image: 'redis:6.2-alpine'
+    ports:
+      - 6379:6379
+    volumes:
+      - redis_data:/data
+    networks:
+      - backend
+  gateway:
+    build: ./api-gateway
+    restart: always
+    hostname: gateway
+    ports:
+      - '3000:3000'
+    depends_on:
+      - redis
+    networks:
+      - backend
+  first-service:
+    build: ./first-service
+    restart: always
+    hostname: first_service
+    depends_on:
+      - redis
+    networks:
+      - backend
+  second-service:
+    build: ./second-service
+    restart: always
+    hostname: second-service
+    depends_on:
+      - redis
+    networks:
+      - backend
+  third-service:
+    build: ./third-service
+    restart: always
+    hostname: third-service
+    depends_on:
+      - redis
+    networks:
+      - backend
+
+volumes:
+  redis_data:
+
+networks:
+  backend:
