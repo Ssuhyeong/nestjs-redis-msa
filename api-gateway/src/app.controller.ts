@@ -5,17 +5,8 @@ import { Observable } from 'rxjs';
 @Controller()
 export class AppController {
   constructor(
-    @Inject('SECOND_SERVICE') private readonly secondClient: ClientProxy,
     @Inject('THIRD_SERVICE') private readonly thirdClient: ClientProxy,
   ) {}
-
-  @Get('/second')
-  testSecondService(): Observable<string> {
-    return this.secondClient.send<string>(
-      { cmd: 'second_service' },
-      'Message from',
-    );
-  }
 
   @Get('/third')
   testThirdService(): Observable<string> {
