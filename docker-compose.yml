@@ -15,8 +15,13 @@ services:
     hostname: gateway
     ports:
       - '3000:3000'
+    env_file:
+      - .env.development.local
     depends_on:
       - redis
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
     networks:
       - backend
   first-service:
