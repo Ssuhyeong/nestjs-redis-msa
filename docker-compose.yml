@@ -24,10 +24,10 @@ services:
       - REDIS_PORT=6379
     networks:
       - backend
-  first-service:
-    build: ./first-service
+  book-service:
+    build: ./book-service
     restart: always
-    hostname: first_service
+    hostname: book-service
     depends_on:
       - redis
     networks:
