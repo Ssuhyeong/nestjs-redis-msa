@@ -32,10 +32,10 @@ services:
       - redis
     networks:
       - backend
-  second-service:
-    build: ./second-service
+  magazines-service:
+    build: ./magazines-service
     restart: always
-    hostname: second-service
+    hostname: magazines-service
     depends_on:
       - redis
     networks:
