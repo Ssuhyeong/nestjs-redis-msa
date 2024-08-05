@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@nestjs/core": "^10.3.10",
+    "@nestjs/throttler": "^6.0.0"
+  }
+}

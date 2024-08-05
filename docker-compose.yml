@@ -45,10 +45,12 @@ services:
       - redis
     networks:
       - backend
-  third-service:
-    build: ./third-service
+  auth-service:
+    build: ./auth-service
     restart: always
-    hostname: third-service
+    hostname: auth-service
+    env_file:
+      - .env.development.local
     depends_on:
       - redis
     networks:
