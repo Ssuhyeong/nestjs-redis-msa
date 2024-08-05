@@ -4,7 +4,7 @@
 
 <br/>
 
-## MSA ( Microservice Architecture )
+## ✅ MSA ( Microservice Architecture )
 * 시스템을 독립적인 단위의 작은 서비스들로 분리
 * 각 서비스들이 사용하는 DB도 분리
 * 각 서비스들은 API(인터페이스)를 통해서만 통신
@@ -26,3 +26,18 @@
 <br/>
 
 ![image](https://github.com/user-attachments/assets/f248ed03-981c-40e1-b03d-e32eba91df8d)
+
+## ✅ Redis Pub/Sub 활용
+
+![image](https://github.com/user-attachments/assets/b1b8fb4a-a0ef-4241-a63b-6f5951e7bda7)
+
+* Redis 서버를 매개로, Redis 클라이언트간 통신을 도움
+* Reids 클라이언트는 Redis 서버 내 "채널"을 생성함
+* 메시지를 수신하고 싶은 클라이언트는 사전에 해당 채널을 subscribe 함
+* 메시지를 보내는 클라이언트는 해당 채널에 메시지를 publish할 수 있음
+* 메시지를 보내는 클라이언트가 메시지를 publish하면, subscribe 중인 클라이언트만 메시지를 수신
+
+# + jwt authentication ( accessToken & refreshToken )
+* Secret key ( access & refresh ) 기반으로 유저 데이터 암호화
+* hashing 알고리즘 Argon2를 활용하여 MongoDB에 password & refreshtoken 암호화
+
