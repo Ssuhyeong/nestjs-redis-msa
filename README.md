@@ -41,3 +41,4 @@
 * Secret key ( access & refresh ) 기반으로 유저 데이터 암호화
 * hashing 알고리즘 Argon2를 활용하여 MongoDB에 password & refreshtoken 암호화
 
+![image](https://github.com/user-attachments/assets/c1b45739-e5fa-4434-b44a-a4e0497b6d30)
