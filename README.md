@@ -1,7 +1,7 @@
 # Redis Pub/Sub을 통한 Microsservice Architecture 구축
 
 ![image](https://github.com/user-attachments/assets/b65484ee-88d5-4d37-8f3a-b6f1d2e4a1ef)
-
+	
 <br/>
 
 ## ✅ MSA ( Microservice Architecture )
@@ -25,7 +25,7 @@
 
 <br/>
 
-![image](https://github.com/user-attachments/assets/f248ed03-981c-40e1-b03d-e32eba91df8d)
+![msa](https://github.com/user-attachments/assets/5f9ad7b0-1e71-4831-9fad-0465e99611ee)
 
 ## ✅ Redis Pub/Sub 활용
 
