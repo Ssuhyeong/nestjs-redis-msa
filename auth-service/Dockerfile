@@ -7,6 +7,8 @@ WORKDIR /app
 # package.json & package-lock.jsond 복사
 COPY package*.json ./
 
+COPY prisma ./prisma/ 
+
 # Install dependencies
 RUN yarn
 
